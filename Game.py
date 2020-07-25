@@ -40,7 +40,7 @@ class Game(object):
 
     def __str__(self):
         '''
-        Overwrites str method
+        Overwrites str
         Returns the grid at current cycle
         '''
         output = "Current cycle: " + str(self.current_cycle) + "/n"
