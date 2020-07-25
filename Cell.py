@@ -9,6 +9,9 @@ class Cell(object):
             self.color = Color.RED
 
     def __str__(self):
+        '''
+        Overwriting str to improve grid readability
+        '''
         if self.color == Color.GREEN:
             return('1')
         else:
