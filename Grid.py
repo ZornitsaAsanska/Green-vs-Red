@@ -1,7 +1,6 @@
 from Cell import Cell
 from Color import Color
 
-
 class Grid(object):
 
     def __init__(self, gen_zero):
@@ -12,9 +11,9 @@ class Grid(object):
         self.width = len(gen_zero[0])
     
     def next(self):
-        next_grid = [[] for row in self.grid]
-        for i in enumerate(self.grid):
-            for j in enumerate(self.grid[i]):
+        next_grid = [ [0]*self.width for i in range(self.height) ]
+        for i in range(self.height):
+            for j in range(self.width):
                 green_neighbours = 0
                 for x in range(max(0, i-1), min(i+1, self.height-1) + 1):
                     for y in range(max(0, j-1), min(j+1, self.height-1) + 1):
@@ -43,4 +42,3 @@ class Grid(object):
             output += str_row
         output = output[:-1]
         return output
-

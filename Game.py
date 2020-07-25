@@ -14,10 +14,14 @@ class Game(object):
     def play(self):
         if not self.current_cycle == self.cycles:
             while self.current_cycle < self.cycles:
-                if self.grid[self.x][self.y] == Color.GREEN:
+                if self.grid.grid[self.x][self.y].color == Color.GREEN:
                     self.green_score +=1
                 self.grid.next()
+                # print(self.grid)
+                # print("-"*self.grid.width)
                 self.current_cycle +=1
+            if self.grid.grid[self.x][self.y].color == Color.GREEN:
+                self.green_score +=1
 
     def result(self):
         if self.current_cycle == self.cycles:
