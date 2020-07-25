@@ -32,9 +32,4 @@ print(grid)
 print(grid.grid[1][1].color)
 game = Game(grid, cycles, y, x)
 game.play()
-print(game.result())
-
-
-
-
-
+print("Green counter: "game.result())
